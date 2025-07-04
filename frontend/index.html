@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Launcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+    <div class="bg-white p-6 rounded shadow-md w-96">
+        <h2 class="text-xl font-bold mb-4">Submit Resume Data</h2>
+
+        <input id="name" class="w-full p-2 border rounded mb-3" placeholder="Enter name" />
+        <input id="skills" class="w-full p-2 border rounded mb-3" placeholder="Enter skills (comma-separated)" />
+        <input id ="email" class="w-full p-2 border rounded mb-3" placeholder="Enter email" />
+
+        <button onclick="submitData()" class="bg-blue-600 text-white px-4 py-2 rounded w-full">
+            Submit
+        </button>
+
+        <p id="response" class="mt-4 text-green-600 text-sm"></p>
+
+    </div>
+
+    <script>
+        async function submitData(){
+            const name = document.getElementById("name").value;
+            const skills = document.getElementById("skills").value.split(',');
+            const email = document.getElementById("email").value;
+
+            const res = await fetch ("http://127.0.0.1:5000/submit",{
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify({name, skills, email})
+            });
+
+            const data = await res.json();
+            document.getElementById("response").innerHTML =
+            `Hello ${name}! Your data has been submitted successfully.`;
+
+
+        }
+    </script>
+</body>
+</html>
