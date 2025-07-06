@@ -30,25 +30,44 @@
 
     <script>
         async function submitData(){
-            const name = document.getElementById("name").value;
-            const skills = document.getElementById("skills").value.split(',');
-            const email = document.getElementById("email").value;
-            const education = document.getElementById("education").value;
-            const experience = document.getElementById("experience").value;
-            const projects = document.getElementById("projects").value;
-            const certifications = document.getElementById("certifications").value;
+            const name = document.getElementById("name").value.trim();
+            const skills = document.getElementById("skills").value.split(',').map(skill => skill.trim());
+            const email = document.getElementById("email").value.trim();
+            const education = document.getElementById("education").value.trim().trim();
+            const experience = document.getElementById("experience").value.trim();
+            const projects = document.getElementById("projects").value.trim();
+            const certifications = document.getElementById("certifications").value.trim();
 
-            const res = await fetch ("http://127.0.0.1:5000/submit",{
-                method: "POST",
-                headers: {
-                    "Content-type": "application/json"
-                },
-                body: JSON.stringify({name, skills, email, education, experience, projects, certifications})
-            });
+            if (!name || !email || skills.length === 0) {
+                document.getElementById("response").innerHTML = "Please fill required fields like name, email and skills.";
+                return;
+            }
 
-            const data = await res.json();
-            document.getElementById("response").innerHTML =
-            `Hello ${name}! Your data has been submitted successfully.`;
+            try {
+                const res = await fetch("http://127.0.0.1:5000/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-type": "application/json"
+                    },
+                    body: JSON.stringify({ name, skills, email, education, experience, projects, certifications })
+                });
+
+                const data = await res.json();
+                document.getElementById("response").innerHTML =
+                    `Hello ${name}! Your data has been submitted successfully.`;
+                    
+
+                document.getElementById("name").value = "";
+                document.getElementById("skills").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("education").value = "";
+                document.getElementById("experience").value = "";
+                document.getElementById("projects").value = "";
+                document.getElementById("certifications").value = "";
+            } catch (error) {
+                console.error(error);
+                document.getElementById("response").innerHTML ="Failed to submit. Please try again.";
+            }
 
 
         }
