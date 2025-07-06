@@ -1,8 +1,14 @@
+import os
 import logging
 
-logging.basicConfig(filename='api_log.txt', level=logging.INFO,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LOG_FILE = os.path.join(BASE_DIR, "api_log.txt")
 
+logging.basicConfig(
+    filename=LOG_FILE,
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -16,17 +22,22 @@ def home():
     return "Welcome to Resume API"
 
 @app.route('/resume', methods=['GET'])
-def get_resume():
-    return jsonify({"name": "Sachin", "skills": ["Python", "Flask"]})
+def get_resumes():
+    return jsonify(data_store)
 
 @app.route('/submit', methods=['POST'])
 def submit_data():
     data = request.get_json()
+
+      # Defensive check
+    if not data or 'name' not in data:
+        return jsonify({"error": "Missing 'name' field"}), 400
+    
     data_store.append(data)
-    logging.info(f"Data received: {data}")
+    logging.info(f"Resume Submitted: {data}")
     return jsonify({
-        "received": data,
-        "total_submissions": len(data_store)
+        "message": f"Resume received from {data['name']}",
+        "total_resumes": len(data_store)
     })
 
 if __name__ == '__main__':

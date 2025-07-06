@@ -1,0 +1,55 @@
+2025-07-06 00:28:16,887 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-06 00:28:16,887 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 00:28:16,888 - INFO -  * Restarting with stat
+2025-07-06 00:28:17,068 - WARNING -  * Debugger is active!
+2025-07-06 00:28:17,070 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 00:29:03,281 - INFO - 127.0.0.1 - - [06/Jul/2025 00:29:03] "GET / HTTP/1.1" 200 -
+2025-07-06 00:29:03,317 - INFO - 127.0.0.1 - - [06/Jul/2025 00:29:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-06 00:29:05,382 - INFO - 127.0.0.1 - - [06/Jul/2025 00:29:05] "GET / HTTP/1.1" 200 -
+2025-07-06 00:37:05,457 - INFO - 127.0.0.1 - - [06/Jul/2025 00:37:05] "OPTIONS /submit HTTP/1.1" 200 -
+2025-07-06 00:37:05,464 - INFO - Resume Submitted: {'name': 'Sachin Pal', 'skills': ['Python ', 'mern dev'], 'email': 'xyz8828@gmail.com', 'education': 'BSc-cs, sies', 'experience': 'intern at google Bangalore , 3 months', 'projects': 'job portal', 'certifications': 'GCP associate'}
+2025-07-06 00:37:05,464 - INFO - 127.0.0.1 - - [06/Jul/2025 00:37:05] "POST /submit HTTP/1.1" 200 -
+2025-07-06 00:37:45,455 - INFO - 127.0.0.1 - - [06/Jul/2025 00:37:45] "OPTIONS /submit HTTP/1.1" 200 -
+2025-07-06 00:37:45,458 - INFO - Resume Submitted: {'name': 'Sachin Pal', 'skills': ['Python ', 'mern dev'], 'email': 'xyz8828@gmail.com', 'education': 'BSc-cs, sies', 'experience': 'intern at google Bangalore , 3 months', 'projects': 'job portal', 'certifications': 'GCP associate'}
+2025-07-06 00:37:45,459 - INFO - 127.0.0.1 - - [06/Jul/2025 00:37:45] "POST /submit HTTP/1.1" 200 -
+2025-07-06 00:44:13,063 - INFO - 127.0.0.1 - - [06/Jul/2025 00:44:13] "GET / HTTP/1.1" 200 -
+2025-07-06 00:44:49,743 - INFO - Resume Submitted: {'message': 'Resume received from Sachin', 'total_resumes': 1}
+2025-07-06 00:44:49,749 - INFO - 127.0.0.1 - - [06/Jul/2025 00:44:49] "[35m[1mPOST /submit HTTP/1.1[0m" 500 -
+2025-07-06 00:51:40,264 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 00:51:40,310 - INFO -  * Restarting with stat
+2025-07-06 00:51:40,531 - WARNING -  * Debugger is active!
+2025-07-06 00:51:40,535 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 00:51:42,662 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 00:51:42,736 - INFO -  * Restarting with stat
+2025-07-06 00:51:42,987 - WARNING -  * Debugger is active!
+2025-07-06 00:51:42,990 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 00:52:05,112 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 00:52:05,143 - INFO -  * Restarting with stat
+2025-07-06 00:52:05,376 - WARNING -  * Debugger is active!
+2025-07-06 00:52:05,379 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 00:52:15,752 - INFO - 127.0.0.1 - - [06/Jul/2025 00:52:15] "GET / HTTP/1.1" 200 -
+2025-07-06 00:53:47,122 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-06 00:53:47,122 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 00:53:47,123 - INFO -  * Restarting with stat
+2025-07-06 00:53:47,323 - WARNING -  * Debugger is active!
+2025-07-06 00:53:47,326 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 00:54:00,749 - INFO - 127.0.0.1 - - [06/Jul/2025 00:54:00] "GET / HTTP/1.1" 200 -
+2025-07-06 00:54:00,821 - INFO - 127.0.0.1 - - [06/Jul/2025 00:54:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-06 00:58:57,708 - INFO - 127.0.0.1 - - [06/Jul/2025 00:58:57] "OPTIONS /submit HTTP/1.1" 200 -
+2025-07-06 00:58:57,711 - INFO - Resume Submitted: {'name': 'Sachin Pal', 'skills': ['Python ', 'mern dev'], 'email': 'xyz8828@gmail.com', 'education': 'bsc-cs, sies', 'experience': 'intern at google , 3 months', 'projects': 'job portal', 'certifications': 'gcp certified'}
+2025-07-06 00:58:57,713 - INFO - 127.0.0.1 - - [06/Jul/2025 00:58:57] "POST /submit HTTP/1.1" 200 -
+2025-07-06 01:06:12,438 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 01:06:12,470 - INFO -  * Restarting with stat
+2025-07-06 01:06:12,717 - WARNING -  * Debugger is active!
+2025-07-06 01:06:12,720 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 01:06:14,728 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 01:06:14,760 - INFO -  * Restarting with stat
+2025-07-06 01:06:14,981 - WARNING -  * Debugger is active!
+2025-07-06 01:06:14,984 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 01:06:53,565 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 01:06:53,593 - INFO -  * Restarting with stat
+2025-07-06 01:06:55,911 - INFO -  * Restarting with stat
+2025-07-06 01:06:59,601 - INFO -  * Restarting with stat
+2025-07-06 01:07:01,883 - INFO -  * Restarting with stat
