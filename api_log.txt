@@ -144,3 +144,154 @@
 2025-07-04 00:10:03,462 - INFO - 127.0.0.1 - - [04/Jul/2025 00:10:03] "OPTIONS /submit HTTP/1.1" 200 -
 2025-07-04 00:10:03,467 - INFO - Data received: {'name': 'Sachin Pal', 'skills': ['Python ', 'mern dev', 'devops'], 'email': 'xyz8828@gmail.com'}
 2025-07-04 00:10:03,468 - INFO - 127.0.0.1 - - [04/Jul/2025 00:10:03] "POST /submit HTTP/1.1" 200 -
+2025-07-06 01:06:56,173 - WARNING -  * Debugger is active!
+2025-07-06 01:06:56,176 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 01:06:59,567 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 01:06:59,819 - WARNING -  * Debugger is active!
+2025-07-06 01:06:59,823 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 01:07:01,853 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 01:07:02,098 - WARNING -  * Debugger is active!
+2025-07-06 01:07:02,101 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 01:07:10,276 - INFO - 127.0.0.1 - - [06/Jul/2025 01:07:10] "GET / HTTP/1.1" 200 -
+2025-07-06 01:08:16,780 - INFO - 127.0.0.1 - - [06/Jul/2025 01:08:16] "OPTIONS /submit HTTP/1.1" 200 -
+2025-07-06 01:08:16,784 - INFO - Resume Submitted: {'name': 'Sachin Pal', 'skills': ['Python ', 'mern dev', 'devops', 'full stack'], 'email': 'xyz8828@gmail.com', 'education': 'cs, sies', 'experience': 'intern at google, 3 months', 'projects': 'job portal', 'certifications': 'aws, gcp'}
+2025-07-06 01:08:16,785 - INFO - 127.0.0.1 - - [06/Jul/2025 01:08:16] "POST /submit HTTP/1.1" 200 -
+2025-07-06 01:09:09,739 - INFO - Resume Submitted: {'name': 'Sachin', 'skills': ['Python', 'Flask'], 'email': 'sachin@gmail.com', 'education': 'BSc CS, Mumbai University', 'experience': 'Intern at XYZ', 'projects': 'Expense Tracker, Job Board', 'certifications': 'Cloud, Python'}
+2025-07-06 01:09:09,740 - INFO - 127.0.0.1 - - [06/Jul/2025 01:09:09] "POST /submit HTTP/1.1" 200 -
+2025-07-06 11:43:33,840 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-06 11:43:33,840 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 11:43:33,842 - INFO -  * Restarting with stat
+2025-07-06 11:43:34,052 - WARNING -  * Debugger is active!
+2025-07-06 11:43:34,090 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 11:43:50,072 - INFO - 127.0.0.1 - - [06/Jul/2025 11:43:50] "GET /resume HTTP/1.1" 200 -
+2025-07-06 11:43:50,140 - INFO - 127.0.0.1 - - [06/Jul/2025 11:43:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-06 11:43:54,483 - INFO - 127.0.0.1 - - [06/Jul/2025 11:43:54] "GET / HTTP/1.1" 200 -
+2025-07-06 11:45:12,674 - INFO - 127.0.0.1 - - [06/Jul/2025 11:45:12] "OPTIONS /submit HTTP/1.1" 200 -
+2025-07-06 11:45:12,710 - INFO - Resume Submitted: {'name': 'Sachin Pal', 'skills': ['Python ', 'mern dev', ' data analyst'], 'email': 'xyz8828@gmail.com', 'education': 'Bsc-CS, SIES Sion', 'experience': 'intern at google, 3 months', 'projects': 'job portal', 'certifications': 'sql, power bi'}
+2025-07-06 11:45:12,710 - INFO - 127.0.0.1 - - [06/Jul/2025 11:45:12] "POST /submit HTTP/1.1" 200 -
+2025-07-06 12:02:06,152 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 12:02:06,218 - INFO -  * Restarting with stat
+2025-07-06 12:29:29,438 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-07-06 12:29:29,439 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-06 12:29:29,440 - INFO -  * Restarting with stat
+2025-07-06 12:29:29,635 - WARNING -  * Debugger is active!
+2025-07-06 12:29:29,638 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 12:29:37,067 - INFO - 127.0.0.1 - - [06/Jul/2025 12:29:37] "GET / HTTP/1.1" 200 -
+2025-07-06 12:30:43,144 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 12:30:43,184 - INFO -  * Restarting with stat
+2025-07-06 12:30:43,420 - WARNING -  * Debugger is active!
+2025-07-06 12:30:43,423 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 12:30:58,963 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 12:30:58,999 - INFO -  * Restarting with stat
+2025-07-06 12:30:59,236 - WARNING -  * Debugger is active!
+2025-07-06 12:30:59,239 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 12:31:13,529 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 12:31:13,573 - INFO -  * Restarting with stat
+2025-07-06 12:31:13,805 - WARNING -  * Debugger is active!
+2025-07-06 12:31:13,807 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 12:31:18,499 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 12:31:18,530 - INFO -  * Restarting with stat
+2025-07-06 12:31:18,736 - WARNING -  * Debugger is active!
+2025-07-06 12:31:18,739 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 12:31:23,196 - INFO - 127.0.0.1 - - [06/Jul/2025 12:31:23] "GET / HTTP/1.1" 200 -
+2025-07-06 12:56:46,685 - INFO -  * Detected change in 'C:\\Users\\Sachin Pal\\Desktop\\career-launcher-platform\\backend\\app.py', reloading
+2025-07-06 12:56:46,716 - INFO -  * Restarting with stat
+2025-07-06 12:56:46,942 - WARNING -  * Debugger is active!
+2025-07-06 12:56:46,945 - INFO -  * Debugger PIN: 134-613-515
+2025-07-06 12:58:12,233 - INFO - 127.0.0.1 - - [06/Jul/2025 12:58:12] "OPTIONS /submit HTTP/1.1" 200 -
+2025-07-06 12:58:12,238 - INFO - Resume Submitted: {'name': 'Mudit Mishra', 'skills': ['Python ', 'mern dev'], 'email': 'paljssi8828@gmail.com', 'education': 'computer science, sies', 'experience': 'intern at hcl tech , 3 months', 'projects': 'music player', 'certifications': 'ACE by google'}
+2025-07-06 12:58:12,239 - INFO - 127.0.0.1 - - [06/Jul/2025 12:58:12] "POST /submit HTTP/1.1" 200 -
+2025-07-06 13:03:43,746 - INFO - 127.0.0.1 - - [06/Jul/2025 13:03:43] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:03:54,694 - INFO - 127.0.0.1 - - [06/Jul/2025 13:03:54] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:04:13,395 - INFO - 127.0.0.1 - - [06/Jul/2025 13:04:13] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:05:33,762 - INFO - 127.0.0.1 - - [06/Jul/2025 13:05:33] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:05:37,519 - INFO - 127.0.0.1 - - [06/Jul/2025 13:05:37] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:05:40,912 - INFO - 127.0.0.1 - - [06/Jul/2025 13:05:40] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:05:45,337 - INFO - 127.0.0.1 - - [06/Jul/2025 13:05:45] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:05:55,018 - INFO - 127.0.0.1 - - [06/Jul/2025 13:05:55] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:06:03,099 - INFO - 127.0.0.1 - - [06/Jul/2025 13:06:03] "GET / HTTP/1.1" 200 -
+2025-07-06 13:06:54,375 - INFO - 127.0.0.1 - - [06/Jul/2025 13:06:54] "OPTIONS /submit HTTP/1.1" 200 -
+2025-07-06 13:06:54,380 - INFO - Resume Submitted: {'name': 'Mudit Mishra', 'skills': ['Python ', 'mern dev', ' data analyst'], 'email': 'xyz8828@gmail.com', 'education': 'bsc, rj', 'experience': 'intern at aws', 'projects': 'aws ci/cd', 'certifications': 'aws architecture'}
+2025-07-06 13:06:54,381 - INFO - 127.0.0.1 - - [06/Jul/2025 13:06:54] "POST /submit HTTP/1.1" 200 -
+2025-07-06 13:07:00,341 - INFO - 127.0.0.1 - - [06/Jul/2025 13:07:00] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:07:03,708 - INFO - 127.0.0.1 - - [06/Jul/2025 13:07:03] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:09:02,556 - INFO - 127.0.0.1 - - [06/Jul/2025 13:09:02] "OPTIONS /submit HTTP/1.1" 200 -
+2025-07-06 13:09:02,560 - INFO - Resume Submitted: {'name': 'Mudit M', 'skills': ['Python ', 'mern dev', ' data analyst', 'pug'], 'email': 'xyz8828@gmail.com', 'education': 'bsc, rj', 'experience': 'intern at aws', 'projects': 'aws ci/cd', 'certifications': 'aws architecture'}
+2025-07-06 13:09:02,561 - INFO - 127.0.0.1 - - [06/Jul/2025 13:09:02] "POST /submit HTTP/1.1" 200 -
+2025-07-06 13:09:04,581 - INFO - Resume Submitted: {'name': 'Mudit M', 'skills': ['Python ', 'mern dev', ' data analyst', 'pug'], 'email': 'xyz8828@gmail.com', 'education': 'bsc, rj', 'experience': 'intern at aws', 'projects': 'aws ci/cd', 'certifications': 'aws architecture'}
+2025-07-06 13:09:04,582 - INFO - 127.0.0.1 - - [06/Jul/2025 13:09:04] "POST /submit HTTP/1.1" 200 -
+2025-07-06 13:09:08,271 - INFO - 127.0.0.1 - - [06/Jul/2025 13:09:08] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:09:29,105 - INFO - 127.0.0.1 - - [06/Jul/2025 13:09:29] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:09:48,051 - INFO - 127.0.0.1 - - [06/Jul/2025 13:09:48] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:09:50,314 - INFO - 127.0.0.1 - - [06/Jul/2025 13:09:50] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:09:54,689 - INFO - 127.0.0.1 - - [06/Jul/2025 13:09:54] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:09:57,966 - INFO - 127.0.0.1 - - [06/Jul/2025 13:09:57] "GET / HTTP/1.1" 200 -
+2025-07-06 13:11:15,914 - INFO - 127.0.0.1 - - [06/Jul/2025 13:11:15] "OPTIONS /submit HTTP/1.1" 200 -
+2025-07-06 13:11:15,918 - INFO - Resume Submitted: {'name': 'abhi', 'skills': ['data analyst'], 'email': 'abhi2@123', 'education': 'CS , IIT BOMBAY', 'experience': 'INTERN AT CISCO , 3 MONTHS', 'projects': 'SMART FACE DITECTOR', 'certifications': 'AWS, GCP, AZURE'}
+2025-07-06 13:11:15,918 - INFO - 127.0.0.1 - - [06/Jul/2025 13:11:15] "POST /submit HTTP/1.1" 200 -
+2025-07-06 13:11:22,193 - INFO - 127.0.0.1 - - [06/Jul/2025 13:11:22] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:13,717 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:13] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:14,646 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:14] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:18,547 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:18] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:19,975 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:19] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:24,997 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:24] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:26,892 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:26] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:29,150 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:29] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:36,131 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:36] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:40,577 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:40] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:41,733 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:41] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:49,537 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:49] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:15:59,212 - INFO - 127.0.0.1 - - [06/Jul/2025 13:15:59] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:00,552 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:00] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:01,859 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:01] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:08,395 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:08] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:10,194 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:10] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:24,936 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:24] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:34,811 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:34] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:35,911 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:35] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:45,123 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:45] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:47,315 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:47] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:49,364 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:49] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:52,269 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:52] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:16:57,584 - INFO - 127.0.0.1 - - [06/Jul/2025 13:16:57] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:17:02,532 - INFO - 127.0.0.1 - - [06/Jul/2025 13:17:02] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:17:07,132 - INFO - 127.0.0.1 - - [06/Jul/2025 13:17:07] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:17:11,968 - INFO - 127.0.0.1 - - [06/Jul/2025 13:17:11] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:17:16,145 - INFO - 127.0.0.1 - - [06/Jul/2025 13:17:16] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:17:18,051 - INFO - 127.0.0.1 - - [06/Jul/2025 13:17:18] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:17:19,617 - INFO - 127.0.0.1 - - [06/Jul/2025 13:17:19] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:17:23,358 - INFO - 127.0.0.1 - - [06/Jul/2025 13:17:23] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:17:25,911 - INFO - 127.0.0.1 - - [06/Jul/2025 13:17:25] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:17:34,856 - INFO - 127.0.0.1 - - [06/Jul/2025 13:17:34] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:18:32,320 - INFO - 127.0.0.1 - - [06/Jul/2025 13:18:32] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:19:14,705 - INFO - 127.0.0.1 - - [06/Jul/2025 13:19:14] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:19:17,369 - INFO - 127.0.0.1 - - [06/Jul/2025 13:19:17] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:20:55,607 - INFO - 127.0.0.1 - - [06/Jul/2025 13:20:55] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:21:03,551 - INFO - 127.0.0.1 - - [06/Jul/2025 13:21:03] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:21:04,790 - INFO - 127.0.0.1 - - [06/Jul/2025 13:21:04] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:21:16,947 - INFO - 127.0.0.1 - - [06/Jul/2025 13:21:16] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:21:18,396 - INFO - 127.0.0.1 - - [06/Jul/2025 13:21:18] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:21:27,983 - INFO - 127.0.0.1 - - [06/Jul/2025 13:21:27] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:21:34,529 - INFO - 127.0.0.1 - - [06/Jul/2025 13:21:34] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:21:36,271 - INFO - 127.0.0.1 - - [06/Jul/2025 13:21:36] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:21:41,100 - INFO - 127.0.0.1 - - [06/Jul/2025 13:21:41] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:21:54,633 - INFO - 127.0.0.1 - - [06/Jul/2025 13:21:54] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:21:59,154 - INFO - 127.0.0.1 - - [06/Jul/2025 13:21:59] "GET / HTTP/1.1" 200 -
+2025-07-06 13:22:08,250 - INFO - 127.0.0.1 - - [06/Jul/2025 13:22:08] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:22:09,321 - INFO - 127.0.0.1 - - [06/Jul/2025 13:22:09] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:22:09,576 - INFO - 127.0.0.1 - - [06/Jul/2025 13:22:09] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:22:09,912 - INFO - 127.0.0.1 - - [06/Jul/2025 13:22:09] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:22:10,139 - INFO - 127.0.0.1 - - [06/Jul/2025 13:22:10] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:22:10,347 - INFO - 127.0.0.1 - - [06/Jul/2025 13:22:10] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:22:13,728 - INFO - 127.0.0.1 - - [06/Jul/2025 13:22:13] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:22:13,965 - INFO - 127.0.0.1 - - [06/Jul/2025 13:22:13] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:22:22,553 - INFO - 127.0.0.1 - - [06/Jul/2025 13:22:22] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:23:17,501 - INFO - 127.0.0.1 - - [06/Jul/2025 13:23:17] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:23:37,808 - INFO - 127.0.0.1 - - [06/Jul/2025 13:23:37] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:26:11,337 - INFO - 127.0.0.1 - - [06/Jul/2025 13:26:11] "OPTIONS /submit HTTP/1.1" 200 -
+2025-07-06 13:26:11,342 - INFO - Resume Submitted: {'name': 'devansh', 'skills': ['Python ', 'mern dev', 'devops', 'full stack'], 'email': 'xyz8828@gmail.com', 'education': 'bsc, rj', 'experience': ' intern at aws', 'projects': 'music player', 'certifications': ' aws architecture'}
+2025-07-06 13:26:11,343 - INFO - 127.0.0.1 - - [06/Jul/2025 13:26:11] "POST /submit HTTP/1.1" 200 -
+2025-07-06 13:26:17,865 - INFO - 127.0.0.1 - - [06/Jul/2025 13:26:17] "GET /resume HTTP/1.1" 200 -
+2025-07-06 13:32:13,554 - INFO - 127.0.0.1 - - [06/Jul/2025 13:32:13] "GET /resume HTTP/1.1" 200 -

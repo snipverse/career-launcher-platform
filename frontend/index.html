@@ -14,7 +14,11 @@
 
         <input id="name" class="w-full p-2 border rounded mb-3" placeholder="Enter name" />
         <input id="skills" class="w-full p-2 border rounded mb-3" placeholder="Enter skills (comma-separated)" />
-        <input id ="email" class="w-full p-2 border rounded mb-3" placeholder="Enter email" />
+        <input id="email" class="w-full p-2 border rounded mb-3" placeholder="Enter email" />
+        <textarea id="education" class="w-full p-2 border rounded mb-3" placeholder="Education (e.g., BSc CS, Mumbai University)"></textarea>
+        <textarea id="experience" class="w-full p-2 border rounded mb-3" placeholder="experience (e.g., intern at xyzz, 3 months)"></textarea>
+        <textarea id="projects" class="w-full p-2 border rounded mb-3" placeholder="Projects (e.g., Expense Tracker, Blog Website)"></textarea>
+        <textarea id="certifications" class="w-full p-2 border rounded mb-3" placeholder="Certifications (e.g., Google Cloud, Python Basics)"></textarea>
 
         <button onclick="submitData()" class="bg-blue-600 text-white px-4 py-2 rounded w-full">
             Submit
@@ -29,13 +33,17 @@
             const name = document.getElementById("name").value;
             const skills = document.getElementById("skills").value.split(',');
             const email = document.getElementById("email").value;
+            const education = document.getElementById("education").value;
+            const experience = document.getElementById("experience").value;
+            const projects = document.getElementById("projects").value;
+            const certifications = document.getElementById("certifications").value;
 
             const res = await fetch ("http://127.0.0.1:5000/submit",{
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
                 },
-                body: JSON.stringify({name, skills, email})
+                body: JSON.stringify({name, skills, email, education, experience, projects, certifications})
             });
 
             const data = await res.json();
