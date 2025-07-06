@@ -9,9 +9,19 @@
 <body class="bg-gray-100 p-6">
     <h1 class="text-3xl font-bold mb-6 text-center text-blue-700">Submitted Resumes</h1>
 
+    <div class="flex justify-center mb-4"> 
+        <input 
+        id="searchInput"
+        type="text"
+        placeholder="Search by name or skill..."
+        class="w-full max-w-md p-2 border border-gray-300 rounded shadow-sm"
+        oninput="filterResumes()"
+    />
+    </div>
+
     <div id="resume-list" class="grid grid-cols-1 sm:grid-cols-2 gap-6 h-[70vh] overflow-y-auto p-2"></div>
 
-    <div class="flex justify-center mt-6"> 
+    <div class="flex justify-center mt-6">
     <button onclick="loadResumes()" class="bg-gray-700 hover:bg-gray-900 text-white font-bold px-4 py-2 rounded flex items-center gap-2 cursor-pointer transition duration-300">
         <span id="refresh-icon" class="inline-block">⏳</span>
         Refresh
@@ -20,6 +30,14 @@
 
 
     <script>
+        let allResumes = []; //to hold fetched resumes
+        
+        function highlightMatch(text, query) {
+            if (!query) return text;
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<span class="bg-yellow-200 font-bold">$1</span>');
+        }
+
         async function loadResumes() {
             const refreshIcon = document.getElementById('refresh-icon');
 
@@ -31,44 +49,66 @@
               const res = await fetch('http://127.0.0.1:5000/resume');
               const data = await res.json();
 
-              const container = document.getElementById("resume-list");
-              container.innerHTML = "";
+              allResumes = data;
+              renderResumes(data);
 
-              if (data.length === 0) {
-                  container.innerHTML = `
-                     <p class="text-gray-500">No resumes submitted yet.</p>
-                  `;
-                  return;
-              }
-              
-              data.forEach((resume, index) => {
-                  const card = document.createElement("div");
-                  card.className = "bg-white p-5 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition";
-
-                  card.innerHTML = `
-                  <h3 class="text-xl font-semibold mb-2">#${index + 1}: ${resume.name}</h3>
-                  <p><strong>Email:</strong> ${resume.email}</p>
-                  <p><strong>Skills:</strong> ${resume.skills.join(', ')}</p>
-                  <p><strong>Education:</strong> ${resume.education}</p>
-                  <p><strong>Experience:</strong> ${resume.experience}</p>
-                  <p><strong>Projects:</strong> ${resume.projects}</p>
-                  <p><strong>Certifications:</strong> ${resume.certifications}</p>
-  
-              `;
-
-             container.appendChild(card);
-              });
-            
             } catch (error) {
                 console.error("Error fetching resumes:", error);
             } finally {
                 refreshIcon.classList.remove("animate-spin");
             }
+
+        }
+
+        function renderResumes(resumes) {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            const container = document.getElementById("resume-list");
+            container.innerHTML = "";
+
+            if (resumes.length === 0) {
+                container.innerHTML = `
+                    <p class="text-gray-500">No resumes found.</p>
+                `;
+                return;
+            }
+              
+            resumes.forEach((resume, index) => {
+              const card = document.createElement("div");
+              card.className = "bg-white p-5 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition";
+
+              const highlightedName = highlightMatch(resume.name, query);
+              const highlightedSkills = highlightMatch(resume.skills.join(', '), query);
+
+              card.innerHTML = `
+                <h3 class="text-xl font-semibold mb-2">#${index + 1}: ${highlightedName}</h3>
+                <p><strong>Email:</strong> ${highlightedSkills}</p>
+                <p><strong>Skills:</strong> ${resume.skills.join(', ')}</p>
+                <p><strong>Education:</strong> ${resume.education}</p>
+                <p><strong>Experience:</strong> ${resume.experience}</p>
+                <p><strong>Projects:</strong> ${resume.projects}</p>
+                <p><strong>Certifications:</strong> ${resume.certifications}</p>
+  
+              `;
+
+              container.appendChild(card);
+            });
             
-          }
+        }
 
-          loadResumes();
+        function filterResumes() {
+                const query = document.getElementById("searchInput").value.toLowerCase();
 
+                const filtered = allResumes.filter(resume =>
+                    resume.name.toLowerCase().includes(query) ||
+                    resume.skills.join(',').toLowerCase().includes(query)
+                );
+
+                renderResumes(filtered);
+        }
+
+        loadResumes();
+
+        
       </script>
 
     
