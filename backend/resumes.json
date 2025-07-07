@@ -1,0 +1,356 @@
+[
+    {
+        "name": "Suraj Yadav",
+        "skills": [
+            "Python",
+            "Java",
+            "SQL",
+            "Excel"
+        ],
+        "email": "suraj@gmailcom",
+        "education": "BSc-CS, RJ",
+        "experience": "intern at rj , 2 months",
+        "projects": "Medeasy: A solution for better tech in Hospitals.",
+        "certifications": "Rj certified"
+    },
+    {
+        "name": "Sachin Pal",
+        "skills": [
+            "SQL",
+            "MONGO DB"
+        ],
+        "email": "xyz8828@gmail.com",
+        "education": "bsc-cs",
+        "experience": "",
+        "projects": "job portal",
+        "certifications": "gcp"
+    },
+    {
+        "name": "abhi",
+        "skills": [
+            "data analyst"
+        ],
+        "email": "abhi2@123",
+        "education": "BSc-CS, SIES",
+        "experience": "FRESHER",
+        "projects": "Expense Tracker",
+        "certifications": "ACE Certified"
+    },
+    {
+        "name": "devansh",
+        "skills": [
+            "Python",
+            "mern dev",
+            "devops",
+            "full stack"
+        ],
+        "email": "palji8828@gmail.com",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "vinit",
+        "skills": [
+            "ml",
+            "ai",
+            "python"
+        ],
+        "email": "abhi2@123",
+        "education": "cs",
+        "experience": "wipro, 1 months",
+        "projects": "expense calculator",
+        "certifications": "udaan data science"
+    },
+    {
+        "name": "abhi",
+        "skills": [
+            "Python",
+            "mern dev",
+            "data analyst"
+        ],
+        "email": "paljssi8828@gmail.com",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "Arya Gupta",
+        "skills": [
+            "SQL",
+            "Excel",
+            "Power BI"
+        ],
+        "email": "arya@123gmail.com",
+        "education": "BTech, IIT Bombay",
+        "experience": "intern at ISRO",
+        "projects": "3D Wall Printer",
+        "certifications": "AWS Architecture"
+    },
+    {
+        "name": "Mudit M",
+        "skills": [
+            "Python",
+            "mern dev",
+            "devops",
+            "full stack"
+        ],
+        "email": "abhi2@123",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "Mudit Mishra",
+        "skills": [
+            "data analyst"
+        ],
+        "email": "xyz8828@gmail.com",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "Aditya Shukla",
+        "skills": [
+            "HTML",
+            "CSS"
+        ],
+        "email": "aditya@1234.com",
+        "education": "BSC-CS , LXCOS",
+        "experience": "FRESHER",
+        "projects": "FACE DITECTOR",
+        "certifications": "BASIC COMPUTER"
+    },
+    {
+        "name": "ram",
+        "skills": [
+            "Python",
+            "mern dev",
+            "data analyst"
+        ],
+        "email": "palji8828@gmail.com",
+        "education": "adas",
+        "experience": "sads",
+        "projects": "efeds",
+        "certifications": "fefscxz"
+    },
+    {
+        "name": "asan hai",
+        "skills": [
+            "dsa"
+        ],
+        "email": "dsa@gmail.com",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "Shrikesh Vishwakarma",
+        "skills": [
+            "D-Farm"
+        ],
+        "email": "shrikesh123@gmail.com",
+        "education": "Somaiya Vidyavihar University",
+        "experience": "fresher",
+        "projects": "Personal Portfolio",
+        "certifications": "D-farm"
+    },
+    {
+        "name": "shiv",
+        "skills": [
+            "marketing"
+        ],
+        "email": "shiv123@gmail.com",
+        "education": "MBA",
+        "experience": "fresher",
+        "projects": "marketing campaign of Zomato",
+        "certifications": "meta verified"
+    },
+    {
+        "name": "arham",
+        "skills": [
+            "Python",
+            "mern dev",
+            "data analyst"
+        ],
+        "email": "abhi2@123",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "devansh",
+        "skills": [
+            "Python",
+            "mern dev",
+            "data analyst",
+            "pug"
+        ],
+        "email": "abhi2@123",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "namdev",
+        "skills": [
+            "Python",
+            "mern dev",
+            "devops"
+        ],
+        "email": "paljssi8828@gmail.com",
+        "education": "dfdv",
+        "experience": "sfcszxc",
+        "projects": "sfedsf",
+        "certifications": "sdwas"
+    },
+    {
+        "name": "Mudit M",
+        "skills": [
+            "Python",
+            "mern dev",
+            "data analyst"
+        ],
+        "email": "abhi2@123",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "deva",
+        "skills": [
+            "Python",
+            "mern dev"
+        ],
+        "email": "dev123@gmailcom",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "sujal gupta",
+        "skills": [
+            "node.js"
+        ],
+        "email": "sujalg@gmail.com",
+        "education": "software engineer",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "Mudit M",
+        "skills": [
+            "Python",
+            "mern dev",
+            "devops",
+            "full stack"
+        ],
+        "email": "paljssi8828@gmail.com",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "altaf",
+        "skills": [
+            "data entry",
+            "accounting"
+        ],
+        "email": "atlaf123@gmail.com",
+        "education": "12th (HSC)",
+        "experience": "2 years of experience at oracle",
+        "projects": "job.com",
+        "certifications": "aws certified"
+    },
+    {
+        "name": "nitesh",
+        "skills": [
+            "Python",
+            "mern dev"
+        ],
+        "email": "nitesh123@gmail.com",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "adityaaa",
+        "skills": [
+            "Python",
+            "mern dev"
+        ],
+        "email": "abhi2@123",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "Sachin Pal",
+        "skills": [
+            "typing"
+        ],
+        "email": "abhi2@123",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "Mayank Singh",
+        "skills": [
+            "Frontend developer"
+        ],
+        "email": "mayank123@gmail.com",
+        "education": "Btech, IIT Bombay",
+        "experience": "worked at HCL , 3 years",
+        "projects": "Food delivery app",
+        "certifications": "AWS CERTIFIED"
+    },
+    {
+        "name": "Ranu Mandal",
+        "skills": [
+            "Singing"
+        ],
+        "email": "ranuterimeri123@gmail.com",
+        "education": "7th fail",
+        "experience": "7 days in Bollywood",
+        "projects": "Teri meri, Teri Meri , Teri Meri",
+        "certifications": "Teri Meri Certified"
+    },
+    {
+        "name": "Aditya Sanjay Shukla",
+        "skills": [
+            "HTML"
+        ],
+        "email": "adityashukla8828@gmail.com",
+        "education": "BSc-CS, LG",
+        "experience": "Fresher",
+        "projects": "Job Portal",
+        "certifications": "AWS Architecture"
+    },
+    {
+        "name": "Manoj Pal",
+        "skills": [
+            "Full Stack Developer"
+        ],
+        "email": "manojp4432@gmail.com",
+        "education": "BTech, Thakur College",
+        "experience": "Works at Azure Cloud Manager",
+        "projects": "chatbot",
+        "certifications": "GCP, AWS"
+    }
+]

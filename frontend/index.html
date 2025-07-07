@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Career Launcher</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
+
 <body class="bg-gray-100 flex items-center justify-center h-screen">
 
-    <div class="bg-white p-6 rounded shadow-md w-96">
-        <h2 class="text-xl font-bold mb-4">Submit Resume Data</h2>
+    <div class="bg-white p-6 rounded shadow-md w-full max-w-md">
+        <h2 class="text-xl font-bold mb-4 text-center text-blue-700">Submit Resume Data</h2>
 
         <input id="name" class="w-full p-2 border rounded mb-3" placeholder="Enter name" />
         <input id="skills" class="w-full p-2 border rounded mb-3" placeholder="Enter skills (comma-separated)" />
         <input id="email" class="w-full p-2 border rounded mb-3" placeholder="Enter email" />
-        <textarea id="education" class="w-full p-2 border rounded mb-3" placeholder="Education (e.g., BSc CS, Mumbai University)"></textarea>
-        <textarea id="experience" class="w-full p-2 border rounded mb-3" placeholder="experience (e.g., intern at xyzz, 3 months)"></textarea>
-        <textarea id="projects" class="w-full p-2 border rounded mb-3" placeholder="Projects (e.g., Expense Tracker, Blog Website)"></textarea>
-        <textarea id="certifications" class="w-full p-2 border rounded mb-3" placeholder="Certifications (e.g., Google Cloud, Python Basics)"></textarea>
+        <textarea id="education" class="w-full p-2 border rounded mb-3"
+            placeholder="Education (e.g., BSc CS, Mumbai University)"></textarea>
+        <textarea id="experience" class="w-full p-2 border rounded mb-3"
+            placeholder="Experience (e.g., intern at XYZ, 3 months)"></textarea>
+        <textarea id="projects" class="w-full p-2 border rounded mb-3"
+            placeholder="Projects (e.g., Expense Tracker, Blog Website)"></textarea>
+        <textarea id="certifications" class="w-full p-2 border rounded mb-3"
+            placeholder="Certifications (e.g., Google Cloud, Python Basics)"></textarea>
 
-        <button onclick="submitData()" class="bg-blue-600 text-white px-4 py-2 rounded w-full">
+        <button type="button" onclick="submitData()"
+            class="bg-blue-600 text-white px-4 py-2 rounded w-full hover:bg-blue-700 transition">
             Submit
         </button>
 
-        <p id="response" class="mt-4 text-green-600 text-sm"></p>
-
+        <p id="response" class="mt-4 text-green-600 text-sm text-center"></p>
     </div>
 
     <script>
-        async function submitData(){
+        async function submitData() {
             const name = document.getElementById("name").value.trim();
             const skills = document.getElementById("skills").value.split(',').map(skill => skill.trim());
             const email = document.getElementById("email").value.trim();
-            const education = document.getElementById("education").value.trim().trim();
+            const education = document.getElementById("education").value.trim();
             const experience = document.getElementById("experience").value.trim();
             const projects = document.getElementById("projects").value.trim();
             const certifications = document.getElementById("certifications").value.trim();
 
-            if (!name || !email || skills.length === 0) {
-                document.getElementById("response").innerHTML = "Please fill required fields like name, email and skills.";
+            if (!name || !email || skills.length === 0 || skills[0] === "") {
+                document.getElementById("response").innerHTML = "⚠️ Please fill required fields: name, email, and skills.";
                 return;
             }
 
@@ -47,30 +52,26 @@
                 const res = await fetch("http://127.0.0.1:5000/submit", {
                     method: "POST",
                     headers: {
-                        "Content-type": "application/json"
+                        "Content-Type": "application/json"
                     },
                     body: JSON.stringify({ name, skills, email, education, experience, projects, certifications })
                 });
 
                 const data = await res.json();
-                document.getElementById("response").innerHTML =
-                    `Hello ${name}! Your data has been submitted successfully.`;
-                    
+                document.getElementById("response").innerHTML = `✅ Hello ${name}! Your resume was submitted successfully.`;
 
-                document.getElementById("name").value = "";
-                document.getElementById("skills").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("education").value = "";
-                document.getElementById("experience").value = "";
-                document.getElementById("projects").value = "";
-                document.getElementById("certifications").value = "";
+                // Clear inputs
+                ["name", "skills", "email", "education", "experience", "projects", "certifications"].forEach(id => {
+                    document.getElementById(id).value = "";
+                });
+
             } catch (error) {
                 console.error(error);
-                document.getElementById("response").innerHTML ="Failed to submit. Please try again.";
+                document.getElementById("response").innerHTML = "❌ Failed to submit. Please try again later.";
             }
-
-
         }
     </script>
+
 </body>
+
 </html>
