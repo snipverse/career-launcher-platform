@@ -352,5 +352,40 @@
         "experience": "Works at Azure Cloud Manager",
         "projects": "chatbot",
         "certifications": "GCP, AWS"
+    },
+    {
+        "name": "devansh",
+        "skills": [
+            "data analyst"
+        ],
+        "email": "sam@gmail.com",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": ""
+    },
+    {
+        "name": "Sachin Pal",
+        "email": "sachin@example.com",
+        "skills": [
+            "Python",
+            "Flask",
+            "Tailwind"
+        ],
+        "education": "BSc CS, Mumbai University",
+        "experience": "Intern at ABC, 3 months",
+        "projects": "Resume Builder, Expense Tracker",
+        "certifications": "Google Cloud, Python Basics"
+    },
+    {
+        "name": "Badshah",
+        "skills": [
+            "rap"
+        ],
+        "email": "rapbadshah1222@gmail.com",
+        "education": "B Tech, IIT Kanpur",
+        "experience": "5 years of singing",
+        "projects": "many albums",
+        "certifications": ""
     }
 ]

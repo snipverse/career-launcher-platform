@@ -17,6 +17,8 @@
             class="w-full max-w-md p-2 border border-gray-300 rounded shadow-sm" />
     </div>
 
+    <div class="text-center text-gray-600 mb-4" id="total-count"></div>
+
     <div id="resume-list" class="grid grid-cols-1 sm:grid-cols-2 gap-6 h-[70vh] overflow-y-auto p-2"></div>
 
     <div class="flex justify-center mt-6">
@@ -38,8 +40,16 @@
             try {
                 const res = await fetch("http://127.0.0.1:5000/resume");
                 const data = await res.json();
+
+                data.sort((a, b) => b.score - a.score);
+
                 allResumes = data;
                 renderResumes(data);
+
+                document.getElementById("total-count").innerText =
+                    `Total Resumes Submitted: ${data.length}`;
+
+
             } catch (error) {
                 console.error("Error fetching resumes:", error);
             }
@@ -49,6 +59,9 @@
             const query = document.getElementById("searchInput").value.toLowerCase();
             const container = document.getElementById("resume-list");
             container.innerHTML = "";
+
+            document.getElementById("total-count").innerText = 
+             `showing ${resumes.length} of ${allResumes.length} resumes`;
 
             if (resumes.length === 0) {
                 container.innerHTML = `<p class="text-gray-500">No resumes found.</p>`;
@@ -70,12 +83,13 @@
           <p><strong>Experience:</strong> ${resume.experience}</p>
           <p><strong>Projects:</strong> ${resume.projects}</p>
           <p><strong>Certifications:</strong> ${resume.certifications}</p>
+          <p><strong>score:</strong> ${resume.score}%</p>
         `;
                 container.appendChild(card);
             });
         }
 
-        // Manual search filtering
+        //Live filtering on input
         document.getElementById("searchInput").addEventListener("input", () => {
             const query = document.getElementById("searchInput").value.toLowerCase();
             const filtered = allResumes.filter(resume =>
@@ -85,10 +99,10 @@
             renderResumes(filtered);
         });
 
-        // Manual refresh
+        //refresh search manually
         document.getElementById("refreshBtn").addEventListener("click", loadResumes);
 
-        // Load resumes only once after DOM is ready
+        //Initial load on page open
         window.addEventListener("load", () => {
             loadResumes();
         });
