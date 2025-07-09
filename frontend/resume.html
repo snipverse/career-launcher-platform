@@ -21,11 +21,16 @@
 
     <div id="resume-list" class="grid grid-cols-1 sm:grid-cols-2 gap-6 h-[70vh] overflow-y-auto p-2"></div>
 
-    <div class="flex justify-center mt-6">
+    <div class="flex justify-center gap-4 mt-6">
         <button id="refreshBtn" class="bg-gray-700 hover:bg-gray-900 text-white font-bold px-4 py-2 rounded">
             🔄 Refresh
         </button>
+    
+        <button onclick="downloadCSV()" class="bg-green-600 hover:bg-green-700 text-white font-bold px-4 py-2 rounded">
+            📥 Export CSV
+        </button>
     </div>
+    
 
     <script>
         let allResumes = [];
@@ -70,7 +75,14 @@
 
             resumes.forEach((resume, index) => {
                 const card = document.createElement("div");
-                card.className = "bg-white p-5 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition";
+
+                let borderColor = "border-gray-300";
+                if (resume.score >= 85) borderColor = "border-green-500";
+                else if (resume.score >= 60) borderColor = "border-blue-400";
+                else if (resume.score >= 30) borderColor = "border-yellow-400";
+                else borderColor = "border-red-500";
+
+                card.className = `bg-white p-5 rounded-lg shadow-md border ${borderColor} hover:shadow-lg transition`;
 
                 const highlightedName = highlightMatch(resume.name, query);
                 const highlightedSkills = highlightMatch(resume.skills.join(', '), query);
@@ -84,6 +96,7 @@
           <p><strong>Projects:</strong> ${resume.projects}</p>
           <p><strong>Certifications:</strong> ${resume.certifications}</p>
           <p><strong>score:</strong> ${resume.score}%</p>
+          <p><strong>Recommendation:</strong> ${resume.recommendation}</p>
         `;
                 container.appendChild(card);
             });
@@ -99,6 +112,7 @@
             renderResumes(filtered);
         });
 
+
         //refresh search manually
         document.getElementById("refreshBtn").addEventListener("click", loadResumes);
 
@@ -106,6 +120,11 @@
         window.addEventListener("load", () => {
             loadResumes();
         });
+
+        function downloadCSV() {
+            window.open("http://127.0.0.1:5000/export", "_blank");
+        }
+
     </script>
 
 </body>

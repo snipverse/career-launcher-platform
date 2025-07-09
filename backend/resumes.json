@@ -387,5 +387,84 @@
         "experience": "5 years of singing",
         "projects": "many albums",
         "certifications": ""
+    },
+    {
+        "name": "xyz",
+        "skills": [
+            "Python",
+            "mern dev"
+        ],
+        "email": "sam@gmail.com",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": "",
+        "score": 43,
+        "recommendation": "\u26a0\ufe0f Needs More Details"
+    },
+    {
+        "name": "Amar Chaudhari",
+        "skills": [
+            "Chef"
+        ],
+        "email": "chefamar@gmail.com",
+        "education": "HSC",
+        "experience": "2 years at a hotel",
+        "projects": "",
+        "certifications": "",
+        "score": 71,
+        "recommendation": "\u2705 Decent Profile"
+    },
+    {
+        "name": "abhi",
+        "skills": [
+            "data analyst"
+        ],
+        "email": "abhi2@123",
+        "education": "ssc",
+        "experience": "2 months at wipro",
+        "projects": "",
+        "certifications": "",
+        "score": 71,
+        "recommendation": " Decent Profile"
+    },
+    {
+        "name": "Radha",
+        "skills": [
+            "Rani"
+        ],
+        "email": "radharani143",
+        "education": "",
+        "experience": "",
+        "projects": "",
+        "certifications": "",
+        "score": 43,
+        "recommendation": "\u26a0\ufe0f Needs More Details"
+    },
+    {
+        "name": "krishna",
+        "skills": [
+            "prem"
+        ],
+        "email": "krishna123@gmail.com",
+        "education": "",
+        "experience": "",
+        "projects": "Prem Mandir",
+        "certifications": "",
+        "score": 57,
+        "recommendation": "\u26a0\ufe0f Needs More Details"
+    },
+    {
+        "name": "Prince Prajapati",
+        "skills": [
+            "MERN STACK"
+        ],
+        "email": "princep23@gmail.com",
+        "education": "BSC-CS, SIES",
+        "experience": "",
+        "projects": "FACE Detector",
+        "certifications": "GCP",
+        "score": 86,
+        "recommendation": "Strong Candidate"
     }
 ]

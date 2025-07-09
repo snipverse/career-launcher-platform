@@ -60,10 +60,17 @@
                 const data = await res.json();
                 document.getElementById("response").innerHTML = `✅ Hello ${name}! Your resume was submitted successfully.`;
 
-                // Clear inputs
-                ["name", "skills", "email", "education", "experience", "projects", "certifications"].forEach(id => {
-                    document.getElementById(id).value = "";
-                });
+                setTimeout(() => {
+                    document.getElementById("response").innerHTML = "";
+                }, 5000);
+
+                // Clear inputs after short delay
+                setTimeout(() => {
+                    ["name", "skills", "email", "education", "experience", "projects", "certifications"].forEach(id => {
+                        document.getElementById(id).value = "";
+                    });
+                }, 1000);
+
 
             } catch (error) {
                 console.error(error);
