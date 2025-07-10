@@ -36,7 +36,8 @@
     <script>
         async function submitData() {
             const name = document.getElementById("name").value.trim();
-            const skills = document.getElementById("skills").value.split(',').map(skill => skill.trim());
+            const skillsInput = document.getElementById("skills").value;
+            const skills = skillsInput ? skillsInput.split(',').map(skill => skill.trim()).filter(Boolean) : [];
             const email = document.getElementById("email").value.trim();
             const education = document.getElementById("education").value.trim();
             const experience = document.getElementById("experience").value.trim();
@@ -69,7 +70,7 @@
                     ["name", "skills", "email", "education", "experience", "projects", "certifications"].forEach(id => {
                         document.getElementById(id).value = "";
                     });
-                }, 1000);
+                }, 10000);
 
 
             } catch (error) {

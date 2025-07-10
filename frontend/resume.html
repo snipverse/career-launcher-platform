@@ -97,6 +97,9 @@
           <p><strong>Certifications:</strong> ${resume.certifications}</p>
           <p><strong>score:</strong> ${resume.score}%</p>
           <p><strong>Recommendation:</strong> ${resume.recommendation}</p>
+          <p><strong>Feedback:</strong><br>
+            ${resume.feedback ? resume.feedback.join('<br>') : "No feedback available"}
+          </p>
         `;
                 container.appendChild(card);
             });

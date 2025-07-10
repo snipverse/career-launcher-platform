@@ -466,5 +466,56 @@
         "certifications": "GCP",
         "score": 86,
         "recommendation": "Strong Candidate"
+    },
+    {
+        "name": "Shivchandra Vishwakarma",
+        "skills": [
+            "Basic Computer"
+        ],
+        "email": "shivchandra123@gmail.com",
+        "education": "BSc-CS, LX",
+        "experience": "",
+        "projects": "",
+        "certifications": "Data Science",
+        "score": 71,
+        "recommendation": "Decent Profile"
+    },
+    {
+        "name": "Vikas Gautam",
+        "skills": [
+            "Mentor"
+        ],
+        "email": "mentorvikas12@gmail.com",
+        "education": "BCom, RJ",
+        "experience": "",
+        "projects": "",
+        "certifications": "",
+        "score": 57,
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role."
+        ]
+    },
+    {
+        "name": "Salman",
+        "skills": [
+            "Communicator"
+        ],
+        "email": "salman.communicator@gmail.com",
+        "education": "",
+        "experience": "Nature Explorer",
+        "projects": "",
+        "certifications": "",
+        "score": 57,
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role.",
+            "\ud83c\udf93 Mention your education background."
+        ]
     }
 ]

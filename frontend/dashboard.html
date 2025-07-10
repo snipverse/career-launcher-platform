@@ -9,31 +9,36 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-gray-100 p-6">
+<body class="bg-gray-100 p-6 ">
     <h1 class="text-3xl font-bold text-center mb-8 text-blue-700">📊 Recruiter Dashboard</h1>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-white text-center mb-10">
-        <div class="bg-blue-500 p-4 rounded shadow">
+    <div class="flex flex-wrap justify-center gap-4 text-white text-center mb-10">
+        <div class="w-52 bg-blue-500 p-4 rounded shadow hover:scale-[1.03] transition-transform">
             <h2 class="text-lg">Total Resumes</h2>
             <p id="total" class="text-2xl font-bold">0</p>
         </div>
-        <div class="bg-green-500 p-4 rounded shadow">
+        <div class="w-52 bg-green-500 p-4 rounded shadow hover:scale-[1.03] transition-transform">
             <h2 class="text-lg">Strong Candidates</h2>
             <p id="strong" class="text-2xl font-bold">0</p>
         </div>
-        <div class="bg-yellow-500 p-4 rounded shadow">
+        <div class="w-52 bg-indigo-500 p-4 rounded shadow hover:scale-[1.03] transition-transform">
+            <h2 class="text-lg">Decent Profiles</h2>
+            <p id="decent" class="text-2xl">0</p>
+        </div>"      
+        <div class="w-52 bg-yellow-500 p-4 rounded shadow hover:scale-[1.03] transition-transform">
             <h2 class="text-lg">Needs More Details</h2>
             <p id="needs" class="text-2xl font-bold">0</p>
         </div>
-        <div class="bg-red-500 p-4 rounded shadow">
+        <div class="w-52 bg-red-500 p-4 rounded shadow hover:scale-[1.03] transition-transform">
             <h2 class="text-lg">Weak Profiles</h2>
             <p id="weak" class="text-2xl font-bold">0</p>
         </div>
     </div>
 
-    <div class="bg-white p-6 rounded shadow max-w-3xl mx-auto">
-        <canvas id="statsChart" height="100"></canvas>
+    <div class="w-[300px] h-[300px] mx-auto">
+        <canvas id="statsChart" width="300" height="300"></canvas>
     </div>
+    
 
     <script>
         async function loadStats() {
@@ -42,12 +47,13 @@
 
             document.getElementById("total").innerText = data.total;
             document.getElementById("strong").innerText = data.strong;
+            document.getElementById("decent").innerText = data.decent;
             document.getElementById("needs").innerText = data.needs_more;
             document.getElementById("weak").innerText = data.weak;
 
             const chart = document.getElementById("statsChart").getContext("2d");
             new Chart(chart, {
-                type: "pie",
+                type: "doughnut",
                 data: {
                     labels: ["Strong", "Decent", "Needs More", "Weak"],
                     datasets: [{
@@ -63,6 +69,7 @@
                         }
                     }
                 }
+                
             });
         }
 

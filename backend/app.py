@@ -55,12 +55,40 @@ def get_recommendation(score):
 def home():
     return "Welcome to Resume API"
 
+def generate_feedback(resume):
+    feedback = []
+
+    # If projects missing or empty
+    if not resume.get("projects") or not resume["projects"].strip():
+        feedback.append("⚠️ Add at least one project to showcase your work.")
+
+    # If certifications missing
+    if not resume.get("certifications") or not resume["certifications"].strip():
+        feedback.append("📜 Include certifications to boost credibility.")
+
+    # If experience missing
+    if not resume.get("experience") or not resume["experience"].strip():
+        feedback.append("🧑‍💼 Add internships or part-time experience.")
+
+    # If skills too few
+    if not resume.get("skills") or len(resume["skills"]) < 3:
+        feedback.append("💡 Add at least 3 skills relevant to your role.")
+
+    # If education is blank
+    if not resume.get("education") or not resume["education"].strip():
+        feedback.append("🎓 Mention your education background.")
+
+    # Default message if everything good
+    return feedback if feedback else ["✅ Your resume looks well-prepared!"]
+
+
 @app.route('/submit', methods=['POST'])
 def submit_resume():
     data = request.get_json()
 
     data['score'] = calculate_score(data)
     data['recommendation'] = get_recommendation(data['score'])
+    data['feedback'] = generate_feedback(data)
     
     resumes = load_data()
     resumes.append(data)
@@ -75,6 +103,7 @@ def get_resumes():
         for r in resumes:
             r['score'] = calculate_score(r)
             r['recommendation'] = get_recommendation(r['score'])
+            r['feedback'] = generate_feedback(r)
 
         return jsonify(resumes)
 
@@ -114,12 +143,14 @@ def export_csv():
     for r in resumes:
         r['score'] = calculate_score(r)
         r['recommendation'] = get_recommendation(r['score'])
+        r['feedback'] = " | ".join(generate_feedback(r))
+
 
     # Write CSV as string first
     csv_string_io = io.StringIO()
     writer = csv.DictWriter(csv_string_io, fieldnames=[
         'name', 'email', 'skills', 'education', 'experience',
-        'projects', 'certifications', 'score', 'recommendation'
+        'projects', 'certifications', 'score', 'recommendation', 'feedback'
     ])
     writer.writeheader()
     writer.writerows(resumes)
