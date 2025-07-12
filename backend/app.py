@@ -5,6 +5,8 @@ import os
 import io
 import csv
 from io import StringIO
+from flask import render_template_string
+from xhtml2pdf import pisa
 
 
 app = Flask(__name__)
@@ -135,7 +137,39 @@ def get_stats():
 
     return jsonify(summary)
 
+
+@app.route('/resume/<email>', methods=["DELETE"])
+def delete_resume(email):
+    resumes = load_data()
+
+    for i, r in enumerate(resumes):
+        if "email" in r and r["email"] == email:
+            removed = resumes.pop(i)
+            save_data(resumes)
+            return jsonify({"message": f"✅ Deleted: {removed.get('name', 'Unknown')}"})
     
+    return jsonify({"error": "❌ Resume not found or invalid structure."}), 404
+
+
+@app.route('/resume/<email>', methods=['PUT'])
+def update_resume(email):
+    resumes = load_data()
+    updated = request.get_json()
+
+    for i, r in enumerate(resumes):
+        if r.get("email") == email:
+            # Replace and recalculate
+            resumes[i].update(updated)
+            resumes[i]['score'] = calculate_score(resumes[i])
+            resumes[i]['recommendation'] = get_recommendation(resumes[i]['score'])
+            resumes[i]['feedback'] = generate_feedback(resumes[i])
+
+            save_data(resumes)
+            return jsonify({"message": f"✅ Updated resume for {updated['name']}"}), 200
+
+    return jsonify({"error": "Resume not found"}), 404
+
+
 @app.route('/export', methods=['GET'])
 def export_csv():
     resumes = load_data()
@@ -165,6 +199,45 @@ def export_csv():
         mimetype='text/csv',
         as_attachment=True,
         download_name='resumes_export.csv'
+    )
+
+@app.route('/download-pdf/<email>', methods=['GET'])
+def download_pdf(email):
+    resumes = load_data()
+    resume = next((r for r in resumes if r['email'] == email), None)
+
+    if not resume:
+        return jsonify({"error": "Resume not found"}), 404
+
+    html_template = f"""
+    <html>
+    <body>
+        <h1>{resume['name']}</h1>
+        <p><strong>Email:</strong> {resume['email']}</p>
+        <p><strong>Skills:</strong> {', '.join(resume['skills'])}</p>
+        <p><strong>Education:</strong> {resume['education']}</p>
+        <p><strong>Experience:</strong> {resume['experience']}</p>
+        <p><strong>Projects:</strong> {resume['projects']}</p>
+        <p><strong>Certifications:</strong> {resume['certifications']}</p>
+        <p><strong>Score:</strong> {resume['score']}%</p>
+        <p><strong>Recommendation:</strong> {resume['recommendation']}</p>
+        <p><strong>Feedback:</strong> <br>{"<br>".join(resume.get("feedback", []))}</p>
+    </body>
+    </html>
+    """
+
+    pdf_bytes = io.BytesIO()
+    pisa_status = pisa.CreatePDF(html_template, dest=pdf_bytes)
+
+    if pisa_status.err:
+        return jsonify({"error": "Failed to generate PDF"}), 500
+
+    pdf_bytes.seek(0)
+    return send_file(
+        pdf_bytes,
+        mimetype="application/pdf",
+        as_attachment=True,
+        download_name=f"{resume['name']}_resume.pdf"
     )
 
 

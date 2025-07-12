@@ -1,54 +1,21 @@
 [
     {
-        "name": "Suraj Yadav",
+        "name": "Otu Pal",
+        "email": "otupal@12gmail.com",
+        "age": 26,
         "skills": [
-            "Python",
-            "Java",
-            "SQL",
-            "Excel"
+            "Driver",
+            "Rider"
         ],
-        "email": "suraj@gmailcom",
-        "education": "BSc-CS, RJ",
-        "experience": "intern at rj , 2 months",
-        "projects": "Medeasy: A solution for better tech in Hospitals.",
-        "certifications": "Rj certified"
-    },
-    {
-        "name": "Sachin Pal",
-        "skills": [
-            "SQL",
-            "MONGO DB"
-        ],
-        "email": "xyz8828@gmail.com",
-        "education": "bsc-cs",
-        "experience": "",
-        "projects": "job portal",
-        "certifications": "gcp"
-    },
-    {
-        "name": "abhi",
-        "skills": [
-            "data analyst"
-        ],
-        "email": "abhi2@123",
-        "education": "BSc-CS, SIES",
-        "experience": "FRESHER",
-        "projects": "Expense Tracker",
-        "certifications": "ACE Certified"
-    },
-    {
-        "name": "devansh",
-        "skills": [
-            "Python",
-            "mern dev",
-            "devops",
-            "full stack"
-        ],
-        "email": "palji8828@gmail.com",
-        "education": "",
-        "experience": "",
-        "projects": "",
-        "certifications": ""
+        "score": 43,
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role.",
+            "\ud83c\udf93 Mention your education background."
+        ]
     },
     {
         "name": "vinit",
@@ -61,20 +28,12 @@
         "education": "cs",
         "experience": "wipro, 1 months",
         "projects": "expense calculator",
-        "certifications": "udaan data science"
-    },
-    {
-        "name": "abhi",
-        "skills": [
-            "Python",
-            "mern dev",
-            "data analyst"
-        ],
-        "email": "paljssi8828@gmail.com",
-        "education": "",
-        "experience": "",
-        "projects": "",
-        "certifications": ""
+        "certifications": "udaan data science, AEC",
+        "score": 100,
+        "recommendation": "Strong Candidate",
+        "feedback": [
+            "\u2705 Your resume looks well-prepared!"
+        ]
     },
     {
         "name": "Arya Gupta",
@@ -170,7 +129,12 @@
         "education": "MBA",
         "experience": "fresher",
         "projects": "marketing campaign of Zomato",
-        "certifications": "meta verified"
+        "certifications": "Zomato Marketing Expert",
+        "score": 100,
+        "recommendation": "Strong Candidate",
+        "feedback": [
+            "\ud83d\udca1 Add at least 3 skills relevant to your role."
+        ]
     },
     {
         "name": "arham",
@@ -238,43 +202,6 @@
         "certifications": ""
     },
     {
-        "name": "sujal gupta",
-        "skills": [
-            "node.js"
-        ],
-        "email": "sujalg@gmail.com",
-        "education": "software engineer",
-        "experience": "",
-        "projects": "",
-        "certifications": ""
-    },
-    {
-        "name": "Mudit M",
-        "skills": [
-            "Python",
-            "mern dev",
-            "devops",
-            "full stack"
-        ],
-        "email": "paljssi8828@gmail.com",
-        "education": "",
-        "experience": "",
-        "projects": "",
-        "certifications": ""
-    },
-    {
-        "name": "altaf",
-        "skills": [
-            "data entry",
-            "accounting"
-        ],
-        "email": "atlaf123@gmail.com",
-        "education": "12th (HSC)",
-        "experience": "2 years of experience at oracle",
-        "projects": "job.com",
-        "certifications": "aws certified"
-    },
-    {
         "name": "nitesh",
         "skills": [
             "Python",
@@ -297,28 +224,6 @@
         "experience": "",
         "projects": "",
         "certifications": ""
-    },
-    {
-        "name": "Sachin Pal",
-        "skills": [
-            "typing"
-        ],
-        "email": "abhi2@123",
-        "education": "",
-        "experience": "",
-        "projects": "",
-        "certifications": ""
-    },
-    {
-        "name": "Mayank Singh",
-        "skills": [
-            "Frontend developer"
-        ],
-        "email": "mayank123@gmail.com",
-        "education": "Btech, IIT Bombay",
-        "experience": "worked at HCL , 3 years",
-        "projects": "Food delivery app",
-        "certifications": "AWS CERTIFIED"
     },
     {
         "name": "Ranu Mandal",
@@ -378,17 +283,6 @@
         "certifications": "Google Cloud, Python Basics"
     },
     {
-        "name": "Badshah",
-        "skills": [
-            "rap"
-        ],
-        "email": "rapbadshah1222@gmail.com",
-        "education": "B Tech, IIT Kanpur",
-        "experience": "5 years of singing",
-        "projects": "many albums",
-        "certifications": ""
-    },
-    {
         "name": "xyz",
         "skills": [
             "Python",
@@ -416,19 +310,6 @@
         "recommendation": "\u2705 Decent Profile"
     },
     {
-        "name": "abhi",
-        "skills": [
-            "data analyst"
-        ],
-        "email": "abhi2@123",
-        "education": "ssc",
-        "experience": "2 months at wipro",
-        "projects": "",
-        "certifications": "",
-        "score": 71,
-        "recommendation": " Decent Profile"
-    },
-    {
         "name": "Radha",
         "skills": [
             "Rani"
@@ -439,19 +320,6 @@
         "projects": "",
         "certifications": "",
         "score": 43,
-        "recommendation": "\u26a0\ufe0f Needs More Details"
-    },
-    {
-        "name": "krishna",
-        "skills": [
-            "prem"
-        ],
-        "email": "krishna123@gmail.com",
-        "education": "",
-        "experience": "",
-        "projects": "Prem Mandir",
-        "certifications": "",
-        "score": 57,
         "recommendation": "\u26a0\ufe0f Needs More Details"
     },
     {
@@ -479,25 +347,6 @@
         "certifications": "Data Science",
         "score": 71,
         "recommendation": "Decent Profile"
-    },
-    {
-        "name": "Vikas Gautam",
-        "skills": [
-            "Mentor"
-        ],
-        "email": "mentorvikas12@gmail.com",
-        "education": "BCom, RJ",
-        "experience": "",
-        "projects": "",
-        "certifications": "",
-        "score": 57,
-        "recommendation": "Needs More Details",
-        "feedback": [
-            "\u26a0\ufe0f Add at least one project to showcase your work.",
-            "\ud83d\udcdc Include certifications to boost credibility.",
-            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
-            "\ud83d\udca1 Add at least 3 skills relevant to your role."
-        ]
     },
     {
         "name": "Salman",
