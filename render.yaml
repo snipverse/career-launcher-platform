@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: career-launcher-platform
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python backend/app.py"
+    plan: free
