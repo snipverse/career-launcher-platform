@@ -59,7 +59,20 @@
                 });
 
                 const data = await res.json();
-                document.getElementById("response").innerHTML = `✅ Hello ${name}! Your resume was submitted successfully.`;
+
+                if (res.ok) {
+                    document.getElementById("response").innerHTML = `✅ Hello ${name}! Your resume was submitted successfully.`;
+
+                    // Clear inputs after short delay
+                    setTimeout(() => {
+                        ["name", "skills", "email", "education", "experience", "projects", "certifications"].forEach(id => {
+                            document.getElementById(id).value = "";
+                        });
+                    }, 10000);
+                } else {
+                    document.getElementById("response").innerHTML = `❌ ${data.error || "Submission failed. Try again."}`;
+                }
+
 
                 setTimeout(() => {
                     document.getElementById("response").innerHTML = "";

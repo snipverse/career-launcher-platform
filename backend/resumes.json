@@ -18,51 +18,6 @@
         ]
     },
     {
-        "name": "vinit",
-        "skills": [
-            "ml",
-            "ai",
-            "python"
-        ],
-        "email": "abhi2@123",
-        "education": "cs",
-        "experience": "wipro, 1 months",
-        "projects": "expense calculator",
-        "certifications": "udaan data science, AEC",
-        "score": 100,
-        "recommendation": "Strong Candidate",
-        "feedback": [
-            "\u2705 Your resume looks well-prepared!"
-        ]
-    },
-    {
-        "name": "Arya Gupta",
-        "skills": [
-            "SQL",
-            "Excel",
-            "Power BI"
-        ],
-        "email": "arya@123gmail.com",
-        "education": "BTech, IIT Bombay",
-        "experience": "intern at ISRO",
-        "projects": "3D Wall Printer",
-        "certifications": "AWS Architecture"
-    },
-    {
-        "name": "Mudit M",
-        "skills": [
-            "Python",
-            "mern dev",
-            "devops",
-            "full stack"
-        ],
-        "email": "abhi2@123",
-        "education": "",
-        "experience": "",
-        "projects": "",
-        "certifications": ""
-    },
-    {
         "name": "Mudit Mishra",
         "skills": [
             "data analyst"
@@ -71,19 +26,16 @@
         "education": "",
         "experience": "",
         "projects": "",
-        "certifications": ""
-    },
-    {
-        "name": "Aditya Shukla",
-        "skills": [
-            "HTML",
-            "CSS"
-        ],
-        "email": "aditya@1234.com",
-        "education": "BSC-CS , LXCOS",
-        "experience": "FRESHER",
-        "projects": "FACE DITECTOR",
-        "certifications": "BASIC COMPUTER"
+        "certifications": "",
+        "score": 43,
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role.",
+            "\ud83c\udf93 Mention your education background."
+        ]
     },
     {
         "name": "ram",
@@ -96,7 +48,12 @@
         "education": "adas",
         "experience": "sads",
         "projects": "efeds",
-        "certifications": "fefscxz"
+        "certifications": "fefscxz",
+        "score": 100,
+        "recommendation": "Strong Candidate",
+        "feedback": [
+            "\u2705 Your resume looks well-prepared!"
+        ]
     },
     {
         "name": "asan hai",
@@ -107,7 +64,16 @@
         "education": "",
         "experience": "",
         "projects": "",
-        "certifications": ""
+        "certifications": "",
+        "score": 43,
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role.",
+            "\ud83c\udf93 Mention your education background."
+        ]
     },
     {
         "name": "Shrikesh Vishwakarma",
@@ -118,7 +84,12 @@
         "education": "Somaiya Vidyavihar University",
         "experience": "fresher",
         "projects": "Personal Portfolio",
-        "certifications": "D-farm"
+        "certifications": "D-farm",
+        "score": 100,
+        "recommendation": "Strong Candidate",
+        "feedback": [
+            "\ud83d\udca1 Add at least 3 skills relevant to your role."
+        ]
     },
     {
         "name": "shiv",
@@ -137,33 +108,6 @@
         ]
     },
     {
-        "name": "arham",
-        "skills": [
-            "Python",
-            "mern dev",
-            "data analyst"
-        ],
-        "email": "abhi2@123",
-        "education": "",
-        "experience": "",
-        "projects": "",
-        "certifications": ""
-    },
-    {
-        "name": "devansh",
-        "skills": [
-            "Python",
-            "mern dev",
-            "data analyst",
-            "pug"
-        ],
-        "email": "abhi2@123",
-        "education": "",
-        "experience": "",
-        "projects": "",
-        "certifications": ""
-    },
-    {
         "name": "namdev",
         "skills": [
             "Python",
@@ -174,20 +118,12 @@
         "education": "dfdv",
         "experience": "sfcszxc",
         "projects": "sfedsf",
-        "certifications": "sdwas"
-    },
-    {
-        "name": "Mudit M",
-        "skills": [
-            "Python",
-            "mern dev",
-            "data analyst"
-        ],
-        "email": "abhi2@123",
-        "education": "",
-        "experience": "",
-        "projects": "",
-        "certifications": ""
+        "certifications": "sdwas",
+        "score": 100,
+        "recommendation": "Strong Candidate",
+        "feedback": [
+            "\u2705 Your resume looks well-prepared!"
+        ]
     },
     {
         "name": "deva",
@@ -199,7 +135,16 @@
         "education": "",
         "experience": "",
         "projects": "",
-        "certifications": ""
+        "certifications": "",
+        "score": 43,
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role.",
+            "\ud83c\udf93 Mention your education background."
+        ]
     },
     {
         "name": "nitesh",
@@ -211,7 +156,16 @@
         "education": "",
         "experience": "",
         "projects": "",
-        "certifications": ""
+        "certifications": "",
+        "score": 43,
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role.",
+            "\ud83c\udf93 Mention your education background."
+        ]
     },
     {
         "name": "adityaaa",
@@ -223,7 +177,16 @@
         "education": "",
         "experience": "",
         "projects": "",
-        "certifications": ""
+        "certifications": "",
+        "score": 43,
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role.",
+            "\ud83c\udf93 Mention your education background."
+        ]
     },
     {
         "name": "Ranu Mandal",
@@ -234,7 +197,12 @@
         "education": "7th fail",
         "experience": "7 days in Bollywood",
         "projects": "Teri meri, Teri Meri , Teri Meri",
-        "certifications": "Teri Meri Certified"
+        "certifications": "Teri Meri Certified",
+        "score": 100,
+        "recommendation": "Strong Candidate",
+        "feedback": [
+            "\ud83d\udca1 Add at least 3 skills relevant to your role."
+        ]
     },
     {
         "name": "Aditya Sanjay Shukla",
@@ -245,7 +213,12 @@
         "education": "BSc-CS, LG",
         "experience": "Fresher",
         "projects": "Job Portal",
-        "certifications": "AWS Architecture"
+        "certifications": "AWS Architecture",
+        "score": 100,
+        "recommendation": "Strong Candidate",
+        "feedback": [
+            "\ud83d\udca1 Add at least 3 skills relevant to your role."
+        ]
     },
     {
         "name": "Manoj Pal",
@@ -256,18 +229,12 @@
         "education": "BTech, Thakur College",
         "experience": "Works at Azure Cloud Manager",
         "projects": "chatbot",
-        "certifications": "GCP, AWS"
-    },
-    {
-        "name": "devansh",
-        "skills": [
-            "data analyst"
-        ],
-        "email": "sam@gmail.com",
-        "education": "",
-        "experience": "",
-        "projects": "",
-        "certifications": ""
+        "certifications": "GCP, AWS",
+        "score": 100,
+        "recommendation": "Strong Candidate",
+        "feedback": [
+            "\ud83d\udca1 Add at least 3 skills relevant to your role."
+        ]
     },
     {
         "name": "Sachin Pal",
@@ -280,7 +247,12 @@
         "education": "BSc CS, Mumbai University",
         "experience": "Intern at ABC, 3 months",
         "projects": "Resume Builder, Expense Tracker",
-        "certifications": "Google Cloud, Python Basics"
+        "certifications": "Google Cloud, Python Basics",
+        "score": 100,
+        "recommendation": "Strong Candidate",
+        "feedback": [
+            "\u2705 Your resume looks well-prepared!"
+        ]
     },
     {
         "name": "xyz",
@@ -294,7 +266,14 @@
         "projects": "",
         "certifications": "",
         "score": 43,
-        "recommendation": "\u26a0\ufe0f Needs More Details"
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role.",
+            "\ud83c\udf93 Mention your education background."
+        ]
     },
     {
         "name": "Amar Chaudhari",
@@ -307,7 +286,12 @@
         "projects": "",
         "certifications": "",
         "score": 71,
-        "recommendation": "\u2705 Decent Profile"
+        "recommendation": "Decent Profile",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role."
+        ]
     },
     {
         "name": "Radha",
@@ -320,7 +304,14 @@
         "projects": "",
         "certifications": "",
         "score": 43,
-        "recommendation": "\u26a0\ufe0f Needs More Details"
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role.",
+            "\ud83c\udf93 Mention your education background."
+        ]
     },
     {
         "name": "Prince Prajapati",
@@ -333,7 +324,11 @@
         "projects": "FACE Detector",
         "certifications": "GCP",
         "score": 86,
-        "recommendation": "Strong Candidate"
+        "recommendation": "Strong Candidate",
+        "feedback": [
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role."
+        ]
     },
     {
         "name": "Shivchandra Vishwakarma",
@@ -346,7 +341,12 @@
         "projects": "",
         "certifications": "Data Science",
         "score": 71,
-        "recommendation": "Decent Profile"
+        "recommendation": "Decent Profile",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role."
+        ]
     },
     {
         "name": "Salman",
@@ -365,6 +365,25 @@
             "\ud83d\udcdc Include certifications to boost credibility.",
             "\ud83d\udca1 Add at least 3 skills relevant to your role.",
             "\ud83c\udf93 Mention your education background."
+        ]
+    },
+    {
+        "name": "abhi",
+        "skills": [
+            "java"
+        ],
+        "email": "abhiray123@email.com",
+        "education": "iit",
+        "experience": "",
+        "projects": "",
+        "certifications": "",
+        "score": 57,
+        "recommendation": "Needs More Details",
+        "feedback": [
+            "\u26a0\ufe0f Add at least one project to showcase your work.",
+            "\ud83d\udcdc Include certifications to boost credibility.",
+            "\ud83e\uddd1\u200d\ud83d\udcbc Add internships or part-time experience.",
+            "\ud83d\udca1 Add at least 3 skills relevant to your role."
         ]
     }
 ]

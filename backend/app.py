@@ -87,12 +87,15 @@ def generate_feedback(resume):
 @app.route('/submit', methods=['POST'])
 def submit_resume():
     data = request.get_json()
+    resumes = load_data()
+
+    if any(r['email'] == data['email'] for r in resumes):
+        return jsonify({"error": "⚠️ Email already exists. Please use a different email."}), 409
 
     data['score'] = calculate_score(data)
     data['recommendation'] = get_recommendation(data['score'])
     data['feedback'] = generate_feedback(data)
     
-    resumes = load_data()
     resumes.append(data)
     save_data(resumes)
     return jsonify({"message": "Resume submitted successfully", "total": len(resumes)})
@@ -212,16 +215,17 @@ def download_pdf(email):
     html_template = f"""
     <html>
     <body>
-        <h1>{resume['name']}</h1>
-        <p><strong>Email:</strong> {resume['email']}</p>
-        <p><strong>Skills:</strong> {', '.join(resume['skills'])}</p>
-        <p><strong>Education:</strong> {resume['education']}</p>
-        <p><strong>Experience:</strong> {resume['experience']}</p>
-        <p><strong>Projects:</strong> {resume['projects']}</p>
-        <p><strong>Certifications:</strong> {resume['certifications']}</p>
-        <p><strong>Score:</strong> {resume['score']}%</p>
-        <p><strong>Recommendation:</strong> {resume['recommendation']}</p>
-        <p><strong>Feedback:</strong> <br>{"<br>".join(resume.get("feedback", []))}</p>
+        <h1>{resume.get('name', '')}</h1>
+    <p><strong>Email:</strong> {resume.get('email', '')}</p>
+    <p><strong>Skills:</strong> {', '.join(resume.get('skills', []))}</p>
+    <p><strong>Education:</strong> {resume.get('education', 'N/A')}</p>
+    <p><strong>Experience:</strong> {resume.get('experience', 'N/A')}</p>
+    <p><strong>Projects:</strong> {resume.get('projects', 'N/A')}</p>
+    <p><strong>Certifications:</strong> {resume.get('certifications', 'N/A')}</p>
+    <p><strong>Score:</strong> {resume.get('score', 0)}%</p>
+    <p><strong>Recommendation:</strong> {resume.get('recommendation', 'N/A')}</p>
+    <p><strong>Feedback:</strong> <br>{"<br>".join(resume.get("feedback", []))}</p>
+
     </body>
     </html>
     """
@@ -240,7 +244,38 @@ def download_pdf(email):
         download_name=f"{resume['name']}_resume.pdf"
     )
 
+@app.route('/repair', methods=['GET'])
+def repair_resumes():
+    try:
+        resumes = load_data()
+        repaired = 0
+
+        for r in resumes:
+            changed = False
+            if 'score' not in r:
+                r['score'] = calculate_score(r)
+                changed = True
+            if 'recommendation' not in r:
+                r['recommendation'] = get_recommendation(r['score'])
+                changed = True
+            if 'feedback' not in r:
+                r['feedback'] = generate_feedback(r)
+                changed = True
+
+            if changed:
+                repaired += 1
+
+        if repaired > 0:
+            save_data(resumes)
+            print(f"✅ Auto-repaired {repaired} resume(s) on startup.")
+        else:
+            print("✅ No repair needed. All resumes are clean.")
+
+    except Exception as e:
+        print(f"❌ Error during resume repair: {str(e)}")
+
 
 if __name__ == '__main__':
+    repair_resumes()
     app.run(debug=True)
 
