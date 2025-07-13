@@ -1,1 +1,4 @@
-flask
+# requirements.txt (main project root)
+Flask
+flask-cors
+xhtml2pdf

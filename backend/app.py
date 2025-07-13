@@ -1,27 +1,24 @@
-from flask import Flask, request, jsonify, send_file
+from flask import Flask, request, jsonify, send_file, render_template
 from flask_cors import CORS
 import json
 import os
 import io
 import csv
-from io import StringIO
-from flask import render_template_string
 from xhtml2pdf import pisa
-
 
 app = Flask(__name__)
 CORS(app)
 
 DATA_FILE = 'resumes.json'
 
-# Read from JSON file
+# ---------------- Helper Functions ---------------- #
+
 def load_data():
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, 'r') as f:
             return json.load(f)
     return []
 
-# Write to JSON file
 def save_data(data):
     with open(DATA_FILE, 'w') as f:
         json.dump(data, f, indent=4)
@@ -34,10 +31,9 @@ def calculate_score(resume):
     for field in fields:
         value = resume.get(field)
         if isinstance(value, list) and len(value) > 0:
-                 score += per_field_score
+            score += per_field_score
         elif isinstance(value, str) and value.strip():
-            if resume[field].strip():
-                  score += per_field_score
+            score += per_field_score
 
     return round(score)
 
@@ -51,38 +47,45 @@ def get_recommendation(score):
     else:
         return "Weak / Incomplete"
 
-    
-
-@app.route('/')
-def home():
-    return "Welcome to Resume API"
-
 def generate_feedback(resume):
     feedback = []
 
-    # If projects missing or empty
     if not resume.get("projects") or not resume["projects"].strip():
         feedback.append("⚠️ Add at least one project to showcase your work.")
 
-    # If certifications missing
     if not resume.get("certifications") or not resume["certifications"].strip():
         feedback.append("📜 Include certifications to boost credibility.")
 
-    # If experience missing
     if not resume.get("experience") or not resume["experience"].strip():
         feedback.append("🧑‍💼 Add internships or part-time experience.")
 
-    # If skills too few
     if not resume.get("skills") or len(resume["skills"]) < 3:
         feedback.append("💡 Add at least 3 skills relevant to your role.")
 
-    # If education is blank
     if not resume.get("education") or not resume["education"].strip():
         feedback.append("🎓 Mention your education background.")
 
-    # Default message if everything good
     return feedback if feedback else ["✅ Your resume looks well-prepared!"]
 
+# ---------------- Frontend Routes ---------------- #
+
+@app.route('/')
+def home():
+    return "✅ Resume API is running."
+
+@app.route('/form')
+def resume_form():
+    return render_template("index.html")
+
+@app.route('/resumes')
+def resumes_ui():
+    return render_template("resume.html")
+
+@app.route('/dashboard')
+def dashboard_ui():
+    return render_template("dashboard.html")
+
+# ---------------- API Routes ---------------- #
 
 @app.route('/submit', methods=['POST'])
 def submit_resume():
@@ -95,7 +98,7 @@ def submit_resume():
     data['score'] = calculate_score(data)
     data['recommendation'] = get_recommendation(data['score'])
     data['feedback'] = generate_feedback(data)
-    
+
     resumes.append(data)
     save_data(resumes)
     return jsonify({"message": "Resume submitted successfully", "total": len(resumes)})
@@ -114,18 +117,11 @@ def get_resumes():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
+
 @app.route('/stats', methods=['GET'])
 def get_stats():
     resumes = load_data()
-    
-    summary = {
-        "total": len(resumes),
-        "strong": 0,
-        "decent": 0,
-        "needs_more": 0,
-        "weak": 0
-    }
+    summary = {"total": len(resumes), "strong": 0, "decent": 0, "needs_more": 0, "weak": 0}
 
     for r in resumes:
         score = calculate_score(r)
@@ -140,19 +136,15 @@ def get_stats():
 
     return jsonify(summary)
 
-
 @app.route('/resume/<email>', methods=["DELETE"])
 def delete_resume(email):
     resumes = load_data()
-
     for i, r in enumerate(resumes):
-        if "email" in r and r["email"] == email:
+        if r.get("email") == email:
             removed = resumes.pop(i)
             save_data(resumes)
-            return jsonify({"message": f"✅ Deleted: {removed.get('name', 'Unknown')}"})
-    
-    return jsonify({"error": "❌ Resume not found or invalid structure."}), 404
-
+            return jsonify({"message": f"✅ Deleted: {removed.get('name', 'Unknown')}"}), 200
+    return jsonify({"error": "❌ Resume not found."}), 404
 
 @app.route('/resume/<email>', methods=['PUT'])
 def update_resume(email):
@@ -161,7 +153,6 @@ def update_resume(email):
 
     for i, r in enumerate(resumes):
         if r.get("email") == email:
-            # Replace and recalculate
             resumes[i].update(updated)
             resumes[i]['score'] = calculate_score(resumes[i])
             resumes[i]['recommendation'] = get_recommendation(resumes[i]['score'])
@@ -172,18 +163,14 @@ def update_resume(email):
 
     return jsonify({"error": "Resume not found"}), 404
 
-
 @app.route('/export', methods=['GET'])
 def export_csv():
     resumes = load_data()
-
     for r in resumes:
         r['score'] = calculate_score(r)
         r['recommendation'] = get_recommendation(r['score'])
         r['feedback'] = " | ".join(generate_feedback(r))
 
-
-    # Write CSV as string first
     csv_string_io = io.StringIO()
     writer = csv.DictWriter(csv_string_io, fieldnames=[
         'name', 'email', 'skills', 'education', 'experience',
@@ -192,7 +179,6 @@ def export_csv():
     writer.writeheader()
     writer.writerows(resumes)
 
-    # Convert string to bytes
     csv_bytes_io = io.BytesIO()
     csv_bytes_io.write(csv_string_io.getvalue().encode('utf-8'))
     csv_bytes_io.seek(0)
@@ -216,16 +202,15 @@ def download_pdf(email):
     <html>
     <body>
         <h1>{resume.get('name', '')}</h1>
-    <p><strong>Email:</strong> {resume.get('email', '')}</p>
-    <p><strong>Skills:</strong> {', '.join(resume.get('skills', []))}</p>
-    <p><strong>Education:</strong> {resume.get('education', 'N/A')}</p>
-    <p><strong>Experience:</strong> {resume.get('experience', 'N/A')}</p>
-    <p><strong>Projects:</strong> {resume.get('projects', 'N/A')}</p>
-    <p><strong>Certifications:</strong> {resume.get('certifications', 'N/A')}</p>
-    <p><strong>Score:</strong> {resume.get('score', 0)}%</p>
-    <p><strong>Recommendation:</strong> {resume.get('recommendation', 'N/A')}</p>
-    <p><strong>Feedback:</strong> <br>{"<br>".join(resume.get("feedback", []))}</p>
-
+        <p><strong>Email:</strong> {resume.get('email', '')}</p>
+        <p><strong>Skills:</strong> {', '.join(resume.get('skills', []))}</p>
+        <p><strong>Education:</strong> {resume.get('education', 'N/A')}</p>
+        <p><strong>Experience:</strong> {resume.get('experience', 'N/A')}</p>
+        <p><strong>Projects:</strong> {resume.get('projects', 'N/A')}</p>
+        <p><strong>Certifications:</strong> {resume.get('certifications', 'N/A')}</p>
+        <p><strong>Score:</strong> {resume.get('score', 0)}%</p>
+        <p><strong>Recommendation:</strong> {resume.get('recommendation', 'N/A')}</p>
+        <p><strong>Feedback:</strong> <br>{"<br>".join(resume.get("feedback", []))}</p>
     </body>
     </html>
     """
@@ -274,8 +259,8 @@ def repair_resumes():
     except Exception as e:
         print(f"❌ Error during resume repair: {str(e)}")
 
+# ---------------- Launch App ---------------- #
 
 if __name__ == '__main__':
     repair_resumes()
     app.run(debug=True)
-
