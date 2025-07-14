@@ -6,7 +6,8 @@ import io
 import csv
 from xhtml2pdf import pisa
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), '../templates'))
+
 CORS(app)
 
 DATA_FILE = 'resumes.json'
