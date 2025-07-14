@@ -68,7 +68,7 @@
 
             async function loadResumes() {
                 try {
-                    const res = await fetch("http://127.0.0.1:5000/resume");
+                    const res = await fetch("/resume");
                     const data = await res.json();
                     data.sort((a, b) => b.score - a.score);
                     allResumes = data;
@@ -164,11 +164,11 @@
             window.addEventListener("load", loadResumes);
 
             function downloadCSV() {
-                window.open("http://127.0.0.1:5000/export", "_blank");
+                window.open("/export", "_blank");
             }
 
             window.downloadPDF = function (email) {
-                const url = `http://127.0.0.1:5000/download-pdf/${encodeURIComponent(email)}`;
+                const url = `/download-pdf/${encodeURIComponent(email)}`;
                 window.open(url, "_blank");
             };
 
@@ -217,7 +217,7 @@
                 };
 
                 try {
-                    const res = await fetch(`http://127.0.0.1:5000/resume/${encodeURIComponent(email)}`, {
+                    const res = await fetch(`/resume/${encodeURIComponent(email)}`, {
                         method: "PUT",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify(updatedResume),
@@ -243,7 +243,7 @@
                 }
 
                 try {
-                    const res = await fetch(`http://127.0.0.1:5000/resume/${encodeURIComponent(email)}`, {
+                    const res = await fetch(`/resume/${encodeURIComponent(email)}`, {
                         method: "DELETE",
                     });
 
